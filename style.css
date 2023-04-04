@@ -1,0 +1,173 @@
+html {
+  font-size: 10px;
+}
+body {
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+h4 {
+  display: inline-block;
+}
+p {
+  display: inline-block;
+  margin: 0;
+}
+.container {
+  height: 100vh;
+  position: relative;
+}
+.btn {
+  font-size: 1.6rem;
+}
+.startQuizContainer,
+.cardContainer,
+.scoreBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.startQuizButton {
+  background-color: #ffff00;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 1.6rem;
+  border-radius: 1rem;
+}
+.startQuizButton.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cardContainer {
+  width: 550px;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.cardContainer.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cardContainerShow {
+  opacity: 1;
+  transform: scale(1);
+}
+.card {
+  font-size: 1.6rem;
+}
+.card-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardTitle {
+  font-weight: 800;
+}
+.timer {
+  display: flex;
+  align-items: center;
+  background-color: #f0aa00;
+  padding: 0.8rem 0.5rem;
+  border-radius: 1rem;
+}
+.timerSecond {
+  background-color: #fcd00d;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+.timerLine {
+  position: absolute;
+  height: 2px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  transition: all 100ms;
+}
+
+.card-body {
+  padding: 3rem 4rem;
+}
+.questionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.optionsCard {
+  border: 2px solid gray;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1.2rem;
+  transition: all 200ms;
+}
+.optionsCard:hover {
+  cursor: pointer;
+  background-color: #fcd00d;
+}
+.optionsCardTrue {
+  background-color: #34d90b;
+}
+.optionsCardFalse {
+  background-color: #db0c07;
+}
+.disabled {
+  pointer-events: none;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.questionİndex {
+  background-color: #fcd00d;
+  border-radius: 1rem;
+  padding: 0.2rem 1rem;
+}
+.btnNextQuesiton {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.7);
+  transition: all 300ms;
+}
+.btnActive {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.scoreBox {
+  width: 550px;
+  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border: 1px solid #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transform: translate(-50%, -50%) scale(0.7);
+}
+.scoreBox.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.fa-crown {
+  font-size: 7em;
+  color: blue;
+}
+.scoreText {
+  margin-top: 2rem;
+}
